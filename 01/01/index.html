@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Square Root Calculator</h1>
+    <label for="num">Enter a number:</label>
+    <input id="num" type=number>
+    <button id="calculator" onclick="calcHeron();">Calculate!</button>
+    <div id="output"></div>
+
+    <script>
+        function calcHeron() {
+            let N = num.value;
+            let g = N/2;
+            let t= 0.000001;
+
+            // if (test)....when the test is true
+            // else.... when the test is false
+            // Math.abs (value) will return absolute value
+            //if (Math.abs(g*g-N)<t) {
+            //    output.innerText= g;
+            //}
+            //else {   
+             //   g=(g+N/g)/2;
+           // }
+            // Loop: a way of repeating a portion of the program.
+            // while-Loop: conintues as long as something is true.
+            while (!(Math.abs(g*g-N)<t)) {
+                g=(g+N/g)/2;
+            }
+            output.innerText=g;
+        }
+    </script>
+</body>
+</html>
